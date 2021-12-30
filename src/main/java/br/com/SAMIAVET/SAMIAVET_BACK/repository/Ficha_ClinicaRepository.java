@@ -12,5 +12,6 @@ import br.com.SAMIAVET.SAMIAVET_BACK.domain.Ficha_Clinica;
 public interface Ficha_ClinicaRepository extends JpaRepository<Ficha_Clinica, Integer>  {
 
 	List<Ficha_Clinica> findByEmail(String email);
-
+	List<Ficha_Clinica> findByNomeAnimal(String nomeAnimal);
+	
 }

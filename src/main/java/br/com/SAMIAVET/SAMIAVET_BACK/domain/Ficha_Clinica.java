@@ -1,5 +1,6 @@
 package br.com.SAMIAVET.SAMIAVET_BACK.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,7 +17,8 @@ public class Ficha_Clinica {
 	private String email;
 	private String endereco;
 	private String cpf;
-	private String nome_animal;
+	@Column(name="nomeanimal")
+	private String nomeAnimal;
 	private String especie_animal;
 	private String raca_animal;
 	private String sexo_animal;
@@ -43,7 +45,7 @@ public class Ficha_Clinica {
 		this.email = email;
 		this.endereco = endereco;
 		this.cpf = cpf;
-		this.nome_animal = nome_animal;
+		this.nomeAnimal = nome_animal;
 		this.especie_animal = especie_animal;
 		this.raca_animal = raca_animal;
 		this.sexo_animal = sexo_animal;
@@ -99,12 +101,15 @@ public class Ficha_Clinica {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	public String getNome_animal() {
-		return nome_animal;
+	
+	public String getNomeAnimal() {
+		return nomeAnimal;
 	}
-	public void setNome_animal(String nome_animal) {
-		this.nome_animal = nome_animal;
+
+	public void setNomeAnimal(String nomeAnimal) {
+		this.nomeAnimal = nomeAnimal;
 	}
+
 	public String getEspecie_animal() {
 		return especie_animal;
 	}

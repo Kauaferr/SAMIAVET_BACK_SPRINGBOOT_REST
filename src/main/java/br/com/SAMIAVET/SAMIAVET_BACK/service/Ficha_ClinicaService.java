@@ -43,4 +43,18 @@ public class Ficha_ClinicaService {
 		}
 		return emailEncontrado;
 	}
+	
+	public void excluir(Integer id) {
+		
+		this.ficha_clinica_repository.deleteById(id);
+	}
+	
+	public Boolean editarFicha(Ficha_ClinicaDTO ficha, String email) {
+		
+			this.ficha_clinica_repository.save(ficha.transformaParaObjeto());
+			return true;
+	
+	}
+	
+	
 }

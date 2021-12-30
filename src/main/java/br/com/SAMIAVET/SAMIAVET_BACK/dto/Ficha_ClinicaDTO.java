@@ -9,7 +9,7 @@ public class Ficha_ClinicaDTO {
 	private String email;
 	private String endereco;
 	private String cpf;
-	private String nome_animal;
+	private String nomeAnimal;
 	private String especie_animal;
 	private String raca_animal;
 	private String sexo_animal;
@@ -36,7 +36,7 @@ public class Ficha_ClinicaDTO {
 		this.email = email;
 		this.endereco = endereco;
 		this.cpf = cpf;
-		this.nome_animal = nome_animal;
+		this.nomeAnimal = nome_animal;
 		this.especie_animal = especie_animal;
 		this.raca_animal = raca_animal;
 		this.sexo_animal = sexo_animal;
@@ -90,12 +90,15 @@ public class Ficha_ClinicaDTO {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	public String getNome_animal() {
-		return nome_animal;
+	
+	public String getNomeAnimal() {
+		return nomeAnimal;
 	}
-	public void setNome_animal(String nome_animal) {
-		this.nome_animal = nome_animal;
+
+	public void setNomeAnimal(String nomeAnimal) {
+		this.nomeAnimal = nomeAnimal;
 	}
+
 	public String getEspecie_animal() {
 		return especie_animal;
 	}
@@ -173,7 +176,7 @@ public class Ficha_ClinicaDTO {
 	public Ficha_Clinica transformaParaObjeto() {
 		return new Ficha_Clinica(
 				this.id, this.nome_proprietario, this.telefone, this.email,this.endereco, this.cpf,
-				this.nome_animal, this.especie_animal, this.raca_animal, this.sexo_animal, this.historico_animal,
+				this.nomeAnimal, this.especie_animal, this.raca_animal, this.sexo_animal, this.historico_animal,
 				this.fc_animal, this.fr_animal, this.p_animal,this.t_animal,this.data_nascimento_animal,
 				this.pelugem_animal, this.peso_animal, this.data_registro_animal
 			
